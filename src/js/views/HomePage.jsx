@@ -1,10 +1,14 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { People } from "./People.jsx";
+import { CardCharacters } from "../component/CardCharacters.jsx";
+import { Planets } from "../component/Planets.jsx";
+import { Starship } from "../component/Starships.jsx";
 
 export const HomePage = () => (
 	<div className="text-center mt-5">
-		<People />
+		<CardCharacters />
+		<Planets />
+		<Starship />
 	</div>
 );

@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			users: [],
+			planets: [],
+			starships: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -24,7 +26,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url, options);
 				if (response.ok) {
 					const data = await response.json();
-					setStore({users: data});
+					setStore({users: data.results});
+				} else {
+					console.log('Error: ', response.status, response.statusText)
+				}
+			},
+
+			getPlanets:  async () => {
+				const url = 'https://www.swapi.tech/api/planets';
+				const options = {
+					method: 'GET'
+				}
+				const response = await fetch(url, options);
+				if (response.ok) {
+					const data = await response.json();
+					setStore({planets: data.results});
+				} else {
+					console.log('Error: ', response.status, response.statusText)
+				}
+			},
+
+			getStarships:  async () => {
+				const url = 'https://www.swapi.tech/api/starships';
+				const options = {
+					method: 'GET'
+				}
+				const response = await fetch(url, options);
+				if (response.ok) {
+					const data = await response.json();
+					setStore({starships: data.results});
 				} else {
 					console.log('Error: ', response.status, response.statusText)
 				}
