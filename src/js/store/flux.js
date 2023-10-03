@@ -4,6 +4,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			users: [],
 			planets: [],
 			starships: [],
+			characters: [],
+			selectCharacter: {},
+			selectCharacterProperties: {},
 			demo: [
 				{
 					title: "FIRST",
@@ -26,7 +29,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url, options);
 				if (response.ok) {
 					const data = await response.json();
-					setStore({users: data.results});
+					let character = data.results
+					setStore({users: character});
 				} else {
 					console.log('Error: ', response.status, response.statusText)
 				}
@@ -40,7 +44,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url, options);
 				if (response.ok) {
 					const data = await response.json();
-					setStore({planets: data.results});
+					let planet = data.results
+					setStore({planets: planet});
 				} else {
 					console.log('Error: ', response.status, response.statusText)
 				}
@@ -54,7 +59,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url, options);
 				if (response.ok) {
 					const data = await response.json();
-					setStore({starships: data.results});
+					let starship = data.results
+					setStore({starships: starship});
+				} else {
+					console.log('Error: ', response.status, response.statusText)
+				}
+			},
+
+			infoCharacters: async (id) => {
+                const url = 'https://www.swapi.tech/api/people/' + id;
+				const options = {
+					method: 'GET'
+				}
+				const response = await fetch(url, options);
+				if (response.ok) {
+					const data = await response.json();
+					let charactersInfo = data.result
+					setStore({selectCharacter: charactersInfo});
+					let characterProperties = data.result.properties;
+					setStore({selectCharacterProperties: characterProperties});
 				} else {
 					console.log('Error: ', response.status, response.statusText)
 				}

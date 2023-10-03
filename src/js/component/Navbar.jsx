@@ -11,8 +11,9 @@ export const Navbar = () => {
 			<div className="dropdown p-3 me-5">
 				<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Favorites
+					<span className="badge bg-secondary ms-2">4</span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul className="dropdown-menu">
 					<li><a className="dropdown-item" href="#">Action</a></li>
 					<li><a className="dropdown-item" href="#">Another action</a></li>
 					<li><a className="dropdown-item" href="#">Something else here</a></li>
