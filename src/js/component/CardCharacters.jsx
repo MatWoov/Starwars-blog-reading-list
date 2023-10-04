@@ -1,15 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import starWarsPoster from "../../img/starwars-poster.jpg";
-import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router";
 
 
 export const CardCharacters = (props) => {
-    const { store, actions } = useContext(Context);
     
-
-
     return (
         <div className="card col-sm-4 m-2 bg-secondary p-0" style={{ width: "18rem" }}>
             <img src={starWarsPoster} className="card-img-top" alt="..." />
