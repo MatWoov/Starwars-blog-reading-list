@@ -12,7 +12,7 @@ import { Footer } from "./component/Footer.jsx";
 import { CharactersPage } from "./views/CharactersPage.jsx";
 import { PlanetDetails } from "./views/PlanetDetails.jsx";
 import { StarshipDetails } from "./views/StarshipDetails.jsx";
-import { Favorite } from "./views/Favorite.jsx";
+
 
 //create your first component
 const Layout = () => {
@@ -30,10 +30,7 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/people/:idContact" element={<CharactersPage />} />
 						<Route path="/planet/:idContact" element={<PlanetDetails />} />
-						<Route path="/starship/:idContact" element={<StarshipDetails />} />
-						<Route path="/favorite" element={<Favorite />} />
-						
-						
+						<Route path="/starship/:idContact" element={<StarshipDetails />} />	
 						{/* <Route path="/single/:theid" element={<Single />} /> */}
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>

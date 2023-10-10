@@ -11,6 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			selectPlanetProperties: {},
 			selectStarship: {},
 			selectStarshipProperties: {},
+			favorites: [],  // Array de objetos, cada objeto tiene dos claves type y name
 			array: [],
 			demo: [
 				{
@@ -120,6 +121,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} else {
 					console.log('Error: ', response.status, response.statusText)
 				}
+			},
+
+			setFavorites: ({type, name}) => {
+				// Determinar si esta agregado al favorito, si esta hay que sacarlo y si no esta hay que agregarlo
+				const store = getStore();  // Almaceno en la variable store todo las claves del store.
+				const found = store.favorites.find((element) => element.name == name && element.type == type);
+				if (found == undefined) {
+					console.log(store.favorites, type, name)
+					setStore({ favorites: [ ...store.favorites, {type, name}]})
+				} else {
+					setStore({ favorites: store.favorites.filter((element) => !(element.name == name && element.type == type))})
+				}
+				
+				// setFavorites([...favorites, ]) 
 			},
 
 

@@ -18,9 +18,9 @@ export const Planets = () => {
                         <div className="card-body">
                             <h5 className="card-title mb-4">{planet.name}</h5>
                             <Link to={"/planet/" + planet.uid}>
-                                <button type="button" className="btn btn-primary">Learn More</button>
+                                <button type="button" className="btn btn-dark ms-0 border border-warning">Learn More</button>
                             </Link>
-                            <button type="button" className="btn btn-outline-warning ms-4"><i className="far fa-heart"></i></button>
+                            <button type="button" className="ms-5 btn btn-outline-warning"><i className="far fa-heart"></i></button>
                         </div>
                     </div>
                 )}
