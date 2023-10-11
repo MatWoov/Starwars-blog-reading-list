@@ -16,7 +16,7 @@ export const CardCharacters = (props) => {
                     <button type="button" className="btn btn-dark ms-0 border border-warning">Learn More</button>
                 </Link>
                 <button type="button" className="ms-5 btn btn-outline-warning" 
-                onClick={() => actions.setFavorites({type:'character', name: props.name})}>
+                onClick={() => actions.setFavorites({type:'Character', name: props.name})}>
                     <i className="far fa-heart"></i>
                     {/* poner un span para que haga algo cuando presiones el favorito */}
                 </button>

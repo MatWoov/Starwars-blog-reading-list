@@ -20,7 +20,10 @@ export const Starship = () => {
                             <Link to={"/starship/" + starship.uid}>
                                 <button type="button" className="btn btn-dark ms-0 border border-warning">Learn More</button>
                             </Link>
-                            <button type="button" className="ms-5 btn btn-outline-warning"><i className="far fa-heart"></i></button>
+                            <button type="button" className="ms-5 btn btn-outline-warning"
+                                onClick={() => actions.setFavorites({ type: 'Starship', name: starship.name })}>
+                                <i className="far fa-heart"></i>
+                            </button>
                         </div>
                     </div>
                 )}
