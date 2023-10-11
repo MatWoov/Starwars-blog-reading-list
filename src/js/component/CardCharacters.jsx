@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 
 export const CardCharacters = (props) => {
     const { store, actions } = useContext(Context)
+    
 
     return (
         <div className="card col-sm-4 m-2 bg-secondary p-0" style={{ width: "18rem" }}>
