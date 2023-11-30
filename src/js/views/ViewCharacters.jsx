@@ -9,7 +9,7 @@ export const ViewCharacters = () => {
 
     return (
         <div className="container text-center">
-            <h1 className="mb-5 text-white">Characters</h1>
+            <h1 className="text-warning mb-5">Characters</h1>
             <div className="row row-cols-2 row-cols-lg-5 g-lg-3 text-center d-flex justify-content-center">
                     {store.users.map((user) =>
                     <CardCharacters key={user.id} name={user.name} id={user.uid} />

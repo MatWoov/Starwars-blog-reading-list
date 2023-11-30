@@ -13,7 +13,7 @@ export const HomeView = () => {
                             <img src="https://i.pinimg.com/originals/4f/c4/09/4fc409fc1c13a5851ffe819152c52698.jpg"
                                 className="rounded" style={{ maxWidth: '100%', height: '500px' }} alt="..." />
                             <div className="mt-3">
-                                <h3 className="title"><strong>Characters</strong></h3>
+                                <h3 className="title text-warning"><strong>Characters</strong></h3>
                             </div>
                         </Link>
                     </div>
@@ -24,7 +24,7 @@ export const HomeView = () => {
                             <img src="https://i.pinimg.com/736x/9b/9c/b4/9b9cb47d8133099d02ebb6465b1f7ae5.jpg"
                                 className="rounded" style={{ maxWidth: '100%', height: '500px' }} alt="..." />
                             <div className="mt-3">
-                                <h3 className="title"><strong>Planets</strong></h3>
+                                <h3 className="title text-warning"><strong>Planets</strong></h3>
                             </div>
                         </Link>
                     </div>
@@ -35,7 +35,7 @@ export const HomeView = () => {
                             <img src="https://w0.peakpx.com/wallpaper/700/837/HD-wallpaper-star-wars-ship-kfd-star-wars-thumbnail.jpg"
                                 className="rounded" style={{ maxWidth: '100%', height: '500px' }} alt="..." />
                             <div className="mt-3">
-                                <h3 className="title"><strong>Starships</strong></h3>
+                                <h3 className="title text-warning"><strong>Starships</strong></h3>
                             </div>
                         </Link>
                     </div>

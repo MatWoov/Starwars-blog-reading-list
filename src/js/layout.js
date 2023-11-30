@@ -7,7 +7,7 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/Navbar.jsx";
 import { Footer } from "./component/Footer.jsx";
-import { CharactersPage } from "./views/CharactersPage.jsx";
+import { CharactersDetails } from "./views/CharactersDetails.jsx";
 import { PlanetDetails } from "./views/PlanetDetails.jsx";
 import { StarshipDetails } from "./views/StarshipDetails.jsx";
 import { ViewCharacters } from "./views/ViewCharacters.jsx";
@@ -29,7 +29,7 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<HomePage />} />
 						<Route path="/demo" element={<Demo />} />
-						<Route path="/character/:idContact" element={<CharactersPage />} />
+						<Route path="/character/:idContact" element={<CharactersDetails />} />
 						<Route path="/planet/:idContact" element={<PlanetDetails />} />
 						<Route path="/starship/:idContact" element={<StarshipDetails />} />
 						<Route path="/characters" element={<ViewCharacters />} />

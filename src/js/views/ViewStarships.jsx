@@ -22,14 +22,14 @@ export const ViewStarships = () => {
 
     return (
         <div className="container text-center">
-            <h1 className="mb-5 text-white">Starships</h1>
+            <h1 className="text-warning mb-5">Starships</h1>
             <div className="row row-cols-2 row-cols-lg-5 g-lg-3 text-center d-flex justify-content-center">
                 {store.starships.map((starship) =>
-                    <div className="card col-sm-4 m-2 bg-secondary p-0" style={{ width: "15rem" }}>
+                    <div className="card col-sm-4 m-2 bg-white p-0  border border-0" style={{ width: "15rem" }}>
                         <img src={getStarshipImage(starship.uid)} className="card-img-top" alt="image starships" 
-                        style={{ objectFit: 'cover', width: '100%', height: '180px'}}/>
+                        style={{ objectFit: 'cover', width: '100%', height: '200px'}}/>
                         <div className="card-body">
-                            <h5 className="card-title mb-4" style={{ height: '50px'}}>{starship.name}</h5>
+                            <h5 className="card-title text-start ms-1" style={{ height: '45px'}}>{starship.name}</h5>
                             <Link to={"/starship/" + starship.uid}>
                                 <button type="button" className="btn btn-dark ms-0 border border-warning">Learn More</button>
                             </Link>

@@ -3,14 +3,14 @@ import { Context } from "../store/appContext";
 import { useParams } from "react-router";
 
 
-export const CharactersPage = () => {
+export const CharactersDetails = () => {
     const { store, actions } = useContext(Context);
     const imageUrl = "https://starwars-visualguide.com/assets/img/characters/";
     const params = useParams();
     actions.infoCharacters(params.idContact);
 
         return (
-            <div className="container bg-secondary rounded">
+            <div className="container bg-white rounded">
                 <div className="p-5 mb-4 bg-body-tertiary rounded-3">
                     <div className="row py-5">
                         <div className="col-4">

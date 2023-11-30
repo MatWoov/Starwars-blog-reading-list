@@ -10,10 +10,10 @@ export const CardCharacters = (props) => {
 
 
     return (
-        <div className="card m-2 bg-secondary p-0" style={{ width: "15rem" }}>
+        <div className="card m-2 bg-white p-0  border border-0" style={{ width: "15rem" }}>
             <img src={`${imageUrl}${props.id}.jpg`} className="card-img-top" alt="image characters" />
             <div className="card-body">
-                <h5 className="card-title mb-4">{props.name}</h5>
+                <h5 className="card-title text-start ms-1 mb-3">{props.name}</h5>
                 <Link to={"/character/" + props.id}>
                     <button type="button" className="btn btn-dark ms-0 border border-warning">Learn More</button>
                 </Link>
