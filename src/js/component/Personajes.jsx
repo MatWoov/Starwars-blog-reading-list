@@ -9,7 +9,7 @@ export const Personajes = () => {
 
     return (
         <div className="container">
-            <h1 className="mb-5">Characters</h1>
+            <h1 className="mb-5 text-white">Characters</h1>
             <div className="row d-flex flex-row flex-nowrap position-relative overflow-auto m-3">
                 {store.users.map((user) =>
                     <CardCharacters key={user.id} name={user.name} id={user.uid} />

@@ -8,7 +8,7 @@ export const Navbar = () => {
 
 
 	return (
-		<nav className="navbar navbar-light bg-dark mb-3 p-0">
+		<nav className="navbar navbar-light bg-black mb-3 p-0">
 			<Link to="/">
 				<img src={starWars} className="img-fluid rounded-start p-3 ms-5" style={{ width: "130px", height: "80px" }} />
 			</Link>
@@ -17,7 +17,7 @@ export const Navbar = () => {
 					Favorites
 					<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">{store.favorites.length}</span>
 				</button>
-				<ul className="dropdown-menu dropdown-menu-lg-end">
+				<ul className="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
 					{(store.favorites.length === 0) ?
 						(<li className="m-2 text-secondary">Empty</li>) :
 						store.favorites.map((item, id) => (
