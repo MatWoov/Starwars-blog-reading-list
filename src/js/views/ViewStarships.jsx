@@ -21,9 +21,9 @@ export const ViewStarships = () => {
     };
 
     return (
-        <div class="container text-center">
+        <div className="container text-center">
             <h1 className="mb-5 text-white">Starships</h1>
-            <div class="row row-cols-2 row-cols-lg-5 g-lg-3 text-center d-flex justify-content-center">
+            <div className="row row-cols-2 row-cols-lg-5 g-lg-3 text-center d-flex justify-content-center">
                 {store.starships.map((starship) =>
                     <div className="card col-sm-4 m-2 bg-secondary p-0" style={{ width: "15rem" }}>
                         <img src={getStarshipImage(starship.uid)} className="card-img-top" alt="image starships" 

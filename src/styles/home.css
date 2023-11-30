@@ -1,4 +1,9 @@
 body {
     /* background: rgb(162, 162, 162); */
-    background: url('https://media.tenor.com/TZaIBNauQfAAAAAC/stars-galaxy.gif');
+    background: url('https://wallpapercrafter.com/th800/10631-starry-sky-stars-space-dark-astronomy-4k.jpg');
+}
+
+.title {
+    font-family: 'Paytone One', sans-serif;
+    color: rgb(255, 225, 0);
 }
