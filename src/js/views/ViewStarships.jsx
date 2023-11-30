@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 
-export const Starship = () => {
+export const ViewStarships = () => {
     const { store, actions } = useContext(Context);
     const imageUrl = "https://starwars-visualguide.com/assets/img/starships/";
 
@@ -21,14 +21,15 @@ export const Starship = () => {
     };
 
     return (
-        <div className="container mt-5">
+        <div class="container text-center">
             <h1 className="mb-5 text-white">Starships</h1>
-            <div className="row d-flex flex-row flex-nowrap position-relative overflow-auto m-3">
+            <div class="row row-cols-2 row-cols-lg-5 g-lg-3 text-center d-flex justify-content-center">
                 {store.starships.map((starship) =>
                     <div className="card col-sm-4 m-2 bg-secondary p-0" style={{ width: "15rem" }}>
-                        <img src={getStarshipImage(starship.uid)} className="card-img-top" alt="image starships" />
+                        <img src={getStarshipImage(starship.uid)} className="card-img-top" alt="image starships" 
+                        style={{ objectFit: 'cover', width: '100%', height: '180px'}}/>
                         <div className="card-body">
-                            <h5 className="card-title mb-4">{starship.name}</h5>
+                            <h5 className="card-title mb-4" style={{ height: '50px'}}>{starship.name}</h5>
                             <Link to={"/starship/" + starship.uid}>
                                 <button type="button" className="btn btn-dark ms-0 border border-warning">Learn More</button>
                             </Link>
